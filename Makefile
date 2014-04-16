@@ -13,7 +13,8 @@ PLATFORM_CFLAGS = -DARMV7 #-DPRELOAD_LINE_SIZE=64 -DPRELOAD_OFFSET=192
 #THUMB2_CFLAGS = -march=armv7-a -Wa,-march=armv7-a -mthumb -Wa,-mthumb -Wa,-mimplicit-it=always \
 #-mthumb-interwork -DCONFIG_THUMB2_KERNEL -DCONFIG_THUMB
 #NEON_CLAGS = DUSE_NEON
-CFLAGS = -std=gnu99 -Ofast -Wall $(PLATFORM_CFLAGS) $(THUMB2_CFLAGS) $(NEON_CFLAGS)
+#CFLAGS = -std=gnu99 -Ofast -Wall $(PLATFORM_CFLAGS) $(THUMB2_CFLAGS) $(NEON_CFLAGS)
+CFLAGS = -std=gnu99 -O3 -ffast-math -Wall $(PLATFORM_CFLAGS) $(THUMB2_CFLAGS) $(NEON_CFLAGS)
 
 all : benchmark
 
